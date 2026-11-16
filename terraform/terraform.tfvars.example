@@ -1,0 +1,10 @@
+# ========================================================
+# Example Terraform Variables
+# ========================================================
+
+aws_region   = "us-east-1"
+environment  = "production"
+project_name = "enterprise-order-event-platform"
+
+sqs_visibility_timeout_seconds = 60
+max_receive_count              = 3
