@@ -44,9 +44,9 @@ resource "aws_iam_policy" "producer_policy" {
         Resource = "*"
       },
       {
-        Sid    = "SQSEnqueue"
-        Effect = "Allow"
-        Action = ["sqs:SendMessage"]
+        Sid      = "SQSEnqueue"
+        Effect   = "Allow"
+        Action   = ["sqs:SendMessage"]
         Resource = aws_sqs_queue.orders_queue.arn
       }
     ]
@@ -114,9 +114,9 @@ resource "aws_iam_policy" "consumer_policy" {
         Resource = aws_sqs_queue.orders_queue.arn
       },
       {
-        Sid    = "DynamoDBWrite"
-        Effect = "Allow"
-        Action = [
+        Sid      = "DynamoDBWrite"
+        Effect   = "Allow"
+        Action   = [
           "dynamodb:PutItem",
           "dynamodb:GetItem",
           "dynamodb:UpdateItem"

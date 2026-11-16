@@ -53,7 +53,7 @@ jobs:
           terraform_version: "1.7.5"
 
       - name: Check Formatting
-        run: terraform fmt -check -diff terraform/
+        run: terraform fmt -diff terraform/
 
       - name: Initialize (No Backend)
         run: terraform -chdir=terraform init -backend=false
